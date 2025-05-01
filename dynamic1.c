@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main() {
+    int num = 0;
+    printf("Enter num: ");
+    scanf("%d", &num);
+    
+    int* arr = (int*)malloc(num * sizeof(int));
+    printf("Enter the elements of the array: ");
+    for(int i = 0; i < num; ++i){
+        scanf("%d", &arr[i]);
+    }
+    for(int i = 0; i < num; ++i) {
+        printf("%d\n", arr[i]);
+    }
+    free(arr);
+    return 0;
+}
